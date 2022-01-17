@@ -1,0 +1,260 @@
+body {
+
+	width: 1000px;
+	margin: 0 auto;
+	
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+button  {
+	background-color: rgb(216, 101, 155);
+	border: 2px solid rgb(216, 101, 155);
+	height: 30px;
+	width: 70px;
+	border-radius: 10px;
+	
+
+	color: #fff;
+}
+button:hover {
+	background-color: rgba(216, 101, 155, 0.911);
+}
+
+h1, h4{
+	text-align: center;
+	text-decoration: none;
+	color: inherit;
+}
+
+
+
+/* index.php */
+.t_list {
+	margin-top: 40px;
+	margin-left:10%; 
+    margin-right:10%;
+	
+}
+
+.t_list thead th{
+	height:40px;
+	border-top:2px solid rgb(216, 101, 155);
+	border-bottom:2px solid rgb(216, 101, 155);
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.t_list tbody td{
+	text-align:center;
+	padding:10px 0;
+	border-bottom:1px solid #ccc; 
+	height:20px;
+	font-size: 15px 
+}
+
+#write_btn, #se_btn {	
+	margin-top:30px;
+	margin-left : 830px;
+
+}
+
+
+
+
+/* write.html */
+
+.t_write{
+	width: 1000px;
+	margin: 0 auto;
+
+	text-align: center;
+}
+
+#wi_title {
+	margin-top:30px;
+	width: 1000px;
+	text-align: center;
+	margin: 0 auto;
+	
+}
+#wi_title textarea  {
+	font-size:26px;
+	color:rgb(155, 155, 155);
+	width: 600px;
+	resize: none;
+	border : 1.5px solid rgb(155, 155, 155);
+	margin: 0 auto;
+}
+
+#wi_content {
+	margin-top:10px;
+}
+#wi_content textarea {
+	font:15px;
+	color:#333;
+	width: 600px;
+	height: 400px;
+	resize: none;
+	border : 1.5px solid rgb(155, 155, 155);
+}
+
+#wi_file, #wi_pw, #wi_name{
+	font-size: 13px;
+	width: 170px;
+	resize: none;
+	margin-left: 200px;
+
+}
+
+#wi_btn{
+	margin-left: -540px;
+}
+
+#wi_name textarea{
+	resize: none;
+	width:170px;
+}
+
+
+/* read.php */
+
+.content{
+	margin-top: 10px;
+	background-color: (0,0,0,0);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	height: 450px;
+	border-style: solid;
+	border-width: 1.5px 0px 1.5px 0px;
+	border-color: rgba(0, 0, 0, 0.233);
+	text-align: center;
+}
+
+#rd_btn {
+	font-size: 20px;
+	text-align: center;
+}
+
+#rd_name{
+	font-size: 18px;
+
+}
+
+#rd_info{
+
+	font-size: 14px;
+	color: #333;
+}
+
+#rd_file{
+	text-align: right;
+	padding-right: 15px;
+	padding-top: 10px;
+}
+
+#file_img {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+
+
+/* modify.php */
+
+#mo_title {
+	margin-top:30px;
+	width: 1000px;
+	text-align: center;
+	margin: 0 auto;
+}
+#mo_title textarea  {
+	font-size:26px;
+	color:#333;
+	width: 600px;
+	resize: none;
+	margin: 0 auto;
+	border : 1.5px solid rgb(155, 155, 155);
+	
+}
+
+#mo_content {
+	margin-top:10px;
+}
+#mo_content textarea {
+	font:15px;
+	color:#333;
+	width: 600px;
+	height: 400px;
+	resize: none;
+	margin-left: 200px;
+	border : 1.5px solid rgb(155, 155, 155);
+}
+
+#mo_name textarea, #mo_pw textarea, #mo_file, #mo_btn, #mo_pw{
+	font-size: 13px;
+	width: 170px;
+	resize: none;
+	margin-left: 200px;
+	margin-top: 5px;
+}
+
+
+
+/* search.php */
+
+#search{
+	text-align: center;
+	text-decoration: none;
+	margin-top: 30px;
+}
+
+
+
+
+/* 페이징 */
+
+#page_num {
+	font-size: 14px;
+	margin-left: 400px;
+	margin-top:30px; 
+	text-align: center;
+	
+}
+#page_num ul li {
+	float: left;
+	margin-left: 10px; 
+	text-align: center;
+	list-style: none;
+	text-decoration-line: none ;
+}
+
+.co_page {
+	font-weight: bold;
+	color:rgb(255, 85, 85);
+}
+
+
+/* delete.html */
+
+.t_delete {
+	background-color: rgb(228, 228, 228);
+}
+
+
+#de_pw, #de_btn{
+	font-size: 13px;
+	width: 170px;
+	resize: none;
+	margin-top: 50px;
+	margin-left: 415px;
+	text-align: center;
+	
+}
+
+#de_btn{
+	margin-top: 10px;
+}

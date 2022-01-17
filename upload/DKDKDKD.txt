@@ -1,0 +1,1 @@
+$filename = iconv("UTF-8", "EUC-KR",$_FILES['up_file']['name']);

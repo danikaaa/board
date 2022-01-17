@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <headr>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>게시판</title>
+    </headr>
+    <body>
+        <h1><a href = "index.php">자유게시판</a></h1>
+        <h4>예쁜말 말만 써요~</h4><hr>
+        
+            <form class = "t_write" action="write.php" method="post" enctype="multipart/form-data">
+                    <div id ="wi_title"><textarea name="title" id="title" rows="1" cols="55" placeholder="제목" maxlength="100" required></textarea></div>
+                    <div id = "wi_content"><textarea name="content" id="content" placeholder="내용" required></textarea></div>
+                    <div id = "wi_file"><input type="file" value="1" name="file"/></div></br>
+                    <div id = "wi_name"><textarea name="name" id="name" rows="1" cols="55" placeholder="작성자" maxlength="100" required></textarea></div>
+                    <div id = "wi_pw"><input type="password" name="pw" id="pw"  placeholder="비밀번호" required /></div>  <br>
+                    <div id ="wi_btn"><button type="submit">글 작성</button></div>
+            </form>
+    </body>
+</html>
+
