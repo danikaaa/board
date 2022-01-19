@@ -7,14 +7,19 @@ $title = $_POST['title'];
 $content = $_POST['content'];
 $date = date('Y-m-d');
 
+
+
 $tmpfile =  $_FILES['file']['tmp_name'];
 $o_name = $_FILES['file']['name'];
 $filename = iconv("UTF-8", "EUC-KR", $_FILES['file']['name']);
 $folder = "upload/" . $filename;
 move_uploaded_file($tmpfile, $folder);
 
+
+
 if ($name && $pw && $title && $content) {
-    $sql = query("insert into board( name,pw,title,content,date,file) values( '" . $name . "', '" . $pw . "', '" . $title . "', '" . $content . "', '" . $date . "', '" . $o_name . "')");
+
+    $sql = query("insert into board( name,pw,title,content,date,file, group ) values( '" . $name . "', '" . $pw . "', '" . $title . "', '" . $content . "', '" . $date . "', '" . $o_name . "', group)");
     $sql2 = query("ALTER TABLE board AUTO_INCREMENT=1");
     $sql2 = query("SET @COUNT = 0");
     $sql2 = query("UPDATE board SET no = @COUNT:=@COUNT+1");
@@ -28,4 +33,3 @@ if ($name && $pw && $title && $content) {
     history.back();</script>";
 }
 ?>
-
