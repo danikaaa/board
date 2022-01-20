@@ -46,14 +46,38 @@
 			<a href = "delete.php?no=<?php echo $board['no']; ?>"><button>삭제</button></a>
          </div>
 
-     <div id = "reply_btn"> 답글
+     <div id = "reply"> 답글</div>
+
+<?php
+     $sql2 = query("select * from board where idx = '" . $board['idx'] . "'  and step > '".$board['step']."' and orderby >= '".$board['orderby']."' ");  
+            while($board = $sql2->fetch_array()){ 
+                
+                if($board['step']){
+                    $re = " ┗❯  re :";
+                    $repl = "0";
+                  }else{
+                    $re = "";
+                    $blank = "";
+                  }
+                    $blank = str_repeat("&nbsp;&nbsp;&nbsp;", $board['step']);?>
+
+     <li class = "reply_list">
+     <?php echo  $blank . $re  ?><span id = reply_list_name><?php echo $board['name']?></span> |<span id = reply_list_date> <?php echo $board['date']?></span>
+         <p> <?php echo $blank . $board['content']?></p>
+     </li>
+    
+<?php }  ?>
+
+<?php 
+$sql = query("select * from board where no='" . $no . "'");
+$board = $sql->fetch_array(); ?>
      <div class = "reply_box">
      <form action="answer.php.?no=<?php echo $no; ?>" method="post" >
-         <textarea name ="reply_title" id = "reply_title" placeholder="제목" required></textarea><br>
-         <textarea name="reply_content" id="reply_content" placeholder="댓글" required></textarea><br>
-         <textarea name="reply_name" id="reply_name" placeholder="작성자" required></textarea><br>
-         <input type="password" name="reply_pw" id="reply_pw"  placeholder="비밀번호" required /><br>
-         <button>답글쓰기</button>
+        <textarea name="reply_content" id="reply_content" placeholder="댓글" required></textarea><br>
+        <textarea name="reply_name" id="reply_name" placeholder="작성자" required></textarea> <br>
+        <input type="password" name="reply_pw" id="reply_pw"  placeholder="비밀번호" required /><br>
+        <input type="hidden" name ="reply_title" id="reply_title" value =<?php echo $board['title']?>> 
+        <button id = reply_btn>답글쓰기</button>
     </div>
          
     </body>
