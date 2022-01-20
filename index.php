@@ -42,12 +42,14 @@
 
         <tbody>
         <?php
+
+        
+
         if(isset($_GET['page'])){
             $page = $_GET['page'];
             }else{
             $page = 1;
          }
-
             $sql = query("select * from board");
             $row_num = mysqli_num_rows($sql);
             $list = 5; 
@@ -62,7 +64,7 @@
             $total_block = ceil($total_page/$block_ct); 
             $start_num = ($page-1) * $list; 
 
-            $sql2 = query("select * from board order by no desc limit $start_num, $list");  
+            $sql2 = query("select * from board order by idx desc limit $start_num, $list");  
             while($row = $sql2->fetch_array()){
             $title=$row["title"]; 
             if(strlen($title)>30)
@@ -72,11 +74,28 @@
             $sql3 = query("select * from board where no='" . $row['no']."'");
             $rep_count = mysqli_num_rows($sql3);
 
+            $sql =query("SELECT COUNT(*) FROM board WHERE idx = '".$row['idx'] ."' and step > 0 ");
+            $repl = mysqli_fetch_row($sql);
+
+            if($row['step']){
+              $re = " ┗❯  re : ";
+              $repl = "0";
+            }else{
+              $re = "";
+              $blank = "";
+            }
+              $blank = str_repeat("&nbsp;&nbsp;", $row['step']);
+
         ?>
 
         <tr>
         <td width="70"><?php echo $row['no']?></td>
-        <td width="500"><a href="read.php?no=<?php echo $row['no'];?>"><?php echo $row['title']; ?></a></td>
+        <td width="500"><a href="read.php?no=<?php echo $row['no'];?>"><?php echo $blank . $re .  $row['title'] ; ?></a>
+        <?php if($repl[0] =='0'){
+            }else{
+              echo "<span class ='repl'>[".$repl[0] ."]</span>";
+            }?>
+      </td>
         <td width="120"><?php echo $row['name']; ?></td>
         <td width="100"><?php echo $row['date']; ?></td>
         <td width="70"><?php echo $row['view']; ?></td>
