@@ -53,7 +53,7 @@
             while($board = $sql2->fetch_array()){ 
                 
                 if($board['step']){
-                    $re = " ┗❯  re :";
+                    $re = " ┗❯ ";
                     $repl = "0";
                   }else{
                     $re = "";
@@ -62,7 +62,7 @@
                     $blank = str_repeat("&nbsp;&nbsp;&nbsp;", $board['step']);?>
 
      <li class = "reply_list">
-     <?php echo  $blank . $re  ?><span id = reply_list_name><?php echo $board['name']?></span> |<span id = reply_list_date> <?php echo $board['date']?></span>
+     <?php echo  $blank . $re  ?><span id = reply_list_name><?php echo $board['name']?></span><span id = reply_list_date> <?php echo $board['date']?></span>
          <p> <?php echo $blank . $board['content']?></p>
      </li>
     
