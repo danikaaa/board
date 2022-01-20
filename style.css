@@ -1,8 +1,6 @@
 body {
-
 	width: 1000px;
 	margin: 0 auto;
-	
 }
 
 a{
@@ -16,10 +14,9 @@ button  {
 	height: 30px;
 	width: 70px;
 	border-radius: 10px;
-	
-
 	color: #fff;
 }
+
 button:hover {
 	background-color: rgba(216, 101, 155, 0.911);
 }
@@ -31,13 +28,11 @@ h1, h4{
 }
 
 
-
 /* index.php */
 .t_list {
 	margin-top: 40px;
 	margin-left:10%; 
     margin-right:10%;
-	
 }
 
 .t_list thead th{
@@ -49,20 +44,17 @@ h1, h4{
 }
 
 .t_list tbody td{
-	text-align:center;
+	
 	padding:10px 0;
 	border-bottom:1px solid #ccc; 
 	height:20px;
 	font-size: 15px 
 }
 
-#write_btn, #se_btn {	
+#index_write_btn, #se_btn {	
 	margin-top:30px;
 	margin-left : 830px;
-
 }
-
-
 
 
 /* write.html */
@@ -70,18 +62,17 @@ h1, h4{
 .t_write{
 	width: 1000px;
 	margin: 0 auto;
-
 	text-align: center;
 }
 
-#wi_title {
+#write_title {
 	margin-top:30px;
 	width: 1000px;
 	text-align: center;
 	margin: 0 auto;
-	
 }
-#wi_title textarea  {
+
+#write_title textarea  {
 	font-size:26px;
 	color:rgb(155, 155, 155);
 	width: 600px;
@@ -90,10 +81,11 @@ h1, h4{
 	margin: 0 auto;
 }
 
-#wi_content {
+#write_content {
 	margin-top:10px;
 }
-#wi_content textarea {
+
+#write_content textarea {
 	font:15px;
 	color:#333;
 	width: 600px;
@@ -102,26 +94,23 @@ h1, h4{
 	border : 1.5px solid rgb(155, 155, 155);
 }
 
-#wi_file, #wi_pw, #wi_name{
+#write_file, #write_pw, #write_name{
 	font-size: 13px;
 	width: 170px;
 	resize: none;
 	margin-left: 200px;
-
 }
 
-#wi_btn{
+#write_btn{
 	margin-left: -540px;
 }
 
-#wi_name textarea{
+#write_name textarea{
 	resize: none;
 	width:170px;
 }
 
-
 /* read.php */
-
 .content{
 	margin-top: 10px;
 	background-color: (0,0,0,0);
@@ -134,23 +123,21 @@ h1, h4{
 	text-align: center;
 }
 
-#rd_btn {
+#read_btn {
 	font-size: 20px;
 	text-align: center;
 }
 
-#rd_name{
+#read_name{
 	font-size: 18px;
-
 }
 
-#rd_info{
-
+#read_info{
 	font-size: 14px;
 	color: #333;
 }
 
-#rd_file{
+#read_file{
 	text-align: right;
 	padding-right: 15px;
 	padding-top: 10px;
@@ -165,26 +152,26 @@ h1, h4{
 
 /* modify.php */
 
-#mo_title {
+#modify_title {
 	margin-top:30px;
 	width: 1000px;
 	text-align: center;
 	margin: 0 auto;
 }
-#mo_title textarea  {
+#modify_title textarea  {
 	font-size:26px;
 	color:#333;
 	width: 600px;
 	resize: none;
 	margin: 0 auto;
 	border : 1.5px solid rgb(155, 155, 155);
-	
 }
 
-#mo_content {
+#modify_content {
 	margin-top:10px;
 }
-#mo_content textarea {
+
+#modify_content textarea {
 	font:15px;
 	color:#333;
 	width: 600px;
@@ -194,7 +181,7 @@ h1, h4{
 	border : 1.5px solid rgb(155, 155, 155);
 }
 
-#mo_name textarea, #mo_pw textarea, #mo_file, #mo_btn, #mo_pw{
+#modify_name textarea, #modify_pw textarea, #modify_file, #modify_btn, #modify_pw{
 	font-size: 13px;
 	width: 170px;
 	resize: none;
@@ -202,10 +189,7 @@ h1, h4{
 	margin-top: 5px;
 }
 
-
-
 /* search.php */
-
 #search{
 	text-align: center;
 	text-decoration: none;
@@ -213,10 +197,7 @@ h1, h4{
 }
 
 
-
-
 /* 페이징 */
-
 #page_num {
 	font-size: 14px;
 	margin-left: 400px;
@@ -239,22 +220,88 @@ h1, h4{
 
 
 /* delete.html */
-
 .t_delete {
 	background-color: rgb(228, 228, 228);
 }
 
-
-#de_pw, #de_btn{
+#delete_pw, #delete_btn{
 	font-size: 13px;
 	width: 170px;
 	resize: none;
 	margin-top: 50px;
 	margin-left: 415px;
 	text-align: center;
+}
+
+#delete_btn{
+	margin-top: 10px;
+}
+
+.reply_box{
 	
 }
 
-#de_btn{
+#reply_title{
+	width:800px;
+	margin-top: 5px 5px;
+	font-size: 13px;
+	resize: none;
+}
+
+#reply_content{
+	width: 800px;
+	height: 60px;
 	margin-top: 10px;
+	margin-bottom: 12px;
+	border : 1.5px solid rgb(155, 155, 155);
+	font:15px;
+	color:#333;
+	resize: none;
+}
+
+#reply_name{
+	width:170px;
+	height: 15px;
+	
+	font-size: 13px;
+	resize: none;
+
+}
+
+
+
+.repl{
+
+	font-weight: bold;
+	color:rgb(255, 85, 85);
+}
+
+
+.reply_list{
+	padding: 5px 5px;
+	list-style:none;
+	margin-top: 10px;
+}
+
+
+#reply_list_name{
+	color :rgb(29, 19, 19);
+	font-weight: bold;
+}
+
+#reply_list_date{
+
+	color: rgba(29, 19, 19, 0.788);
+	font-size: 14px;
+}
+
+
+#reply{
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+#reply_btn{
+	margin: 10px;
 }
